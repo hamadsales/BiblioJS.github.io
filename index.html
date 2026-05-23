@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioStore - Vitrine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Biblio<span>JS</span></h1>
+        <!-- Container que engloba o filtro e a pesquisa -->
+        <div class="search-filter-wrapper">
+
+            <!-- Filtro de Ordenação -->
+            <select class="sort-select" aria-label="Ordenar resultados" name="ordenacao">
+                <option value="" selected>Ordenar por...</option>
+                <option value="menor-preco">Menor Preço</option>
+                <option value="maior-preco">Maior Preço</option>
+                <option value="alfabetica">Ordem Alfabética (A-Z)</option>
+            </select>
+
+            <!-- Barra de pesquisa -->
+            <form class="search-container" action="#" method="GET">
+                <input type="search" class="search-input" placeholder="O que você está procurando..."
+                    aria-label="Pesquisar" required>
+                <button type="submit" class="search-button" aria-label="Buscar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </form>
+
+        </div>
+    </header>
+    <main class="book-grid">
+
+        <article class="book-card" >
+            <div class="book-cover cover-1">📘</div>
+            <div class="book-info">
+                <h2 class="book-title">Estruturas de Dados Modernas</h2>
+                <span class="book-author">Por Alan Turing</span>
+                <div class="book-price">R$ 89,90</div>
+                <button class="btn-comprar" >Comprar</button>
+            </div>
+        </article>
+
+        <article class="book-card">
+            <div class="book-cover cover-2">📗</div>
+            <div class="book-info">
+                <h2 class="book-title">Clean Code em JavaScript</h2>
+                <span class="book-author">Por Ada Lovelace</span>
+                <div class="book-price">R$ 115,50</div>
+                <button class="btn-comprar" >Comprar</button>
+            </div>
+        </article>
+
+        <article class="book-card">
+            <div class="book-cover cover-3">📙</div>
+            <div class="book-info">
+                <h2 class="book-title">Arquitetura de Software</h2>
+                <span class="book-author">Por Grace Hopper</span>
+                <div class="book-price">R$ 142,00</div>
+                <button class="btn-comprar" >Comprar</button>
+            </div>
+        </article>
+
+        <article class="book-card">
+            <div class="book-cover cover-4">📕</div>
+            <div class="book-info">
+                <h2 class="book-title">Machine Learning Prático</h2>
+                <span class="book-author">Por John von Neumann</span>
+                <div class="book-price">R$ 130,00</div>
+                <button class="btn-comprar" >Comprar</button>
+            </div>
+        </article>
+
+        <article class="book-card">
+            <div class="book-cover cover-5">📘</div>
+            <div class="book-info">
+                <h2 class="book-title">Hábitos Atômicos</h2>
+                <span class="book-author">Por James Clear</span>
+                <div class="book-price">R$ 59,90</div>
+                <button class="btn-comprar" >Comprar</button>
+            </div>
+        </article>
+
+        <article class="book-card">
+            <div class="book-cover cover-6">📗</div>
+            <div class="book-info">
+                <h2 class="book-title">1984</h2>
+                <span class="book-author">Por George Orwell</span>
+                <div class="book-price">R$ 42,90</div>
+                <button class="btn-comprar" >Comprar</button>
+            </div>
+        </article>
+
+        <article class="book-card">
+            <div class="book-cover cover-7">📙</div>
+            <div class="book-info">
+                <h2 class="book-title">Dom Casmurro</h2>
+                <span class="book-author">Por Machado de Assis</span>
+                <div class="book-price">R$ 34,50</div>
+                <button class="btn-comprar" >Comprar</button>
+            </div>
+        </article>
+
+        <article class="book-card">
+            <div class="book-cover cover-8">📕</div>
+            <div class="book-info">
+                <h2 class="book-title">O Pequeno Príncipe</h2>
+                <span class="book-author">Por Antoine de Saint-Exupéry</span>
+                <div class="book-price">R$ 29,90</div>
+                <button class="btn-comprar" >Comprar</button>
+            </div>
+        </article>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

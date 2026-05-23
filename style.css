@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 3rem 1.5rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+header h1 span {
+    color: #38bdf8;
+}
+
+/* Grid de Livros */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card do Livro */
+.book-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-6px);
+    border-color: #475569;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Capa Simulada */
+.book-cover {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.cover-1 {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.cover-2 {
+    background: linear-gradient(135deg, #10b981, #047857);
+}
+
+.cover-3 {
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+}
+
+.cover-4 {
+    background: linear-gradient(135deg, #f59e0b, #b45309);
+}
+
+.cover-5 {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.cover-6 {
+    background: linear-gradient(135deg, #10b981, #047857);
+}
+
+.cover-7 {
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+}
+
+.cover-8 {
+    background: linear-gradient(135deg, #f59e0b, #b45309);
+}
+
+/* Informações do Livro */
+.book-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.book-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #f8fafc;
+}
+
+.book-author {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+}
+
+/* Preço e Botão */
+.book-price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #38bdf8;
+    margin-top: auto;
+    /* Empurra o preço e botão pro final do card */
+    margin-bottom: 1rem;
+}
+
+.btn-comprar {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #7dd3fc;
+}
+/* Container que alinha tudo à direita e lado a lado */
+.search-filter-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Mantém tudo no lado direito da tela */
+  gap: 15px; /* Espaço entre o filtro e a barra de busca */
+  width: 100%;
+  padding: 10px;
+}
+
+/* Estilo do botão de Filtro (Select) */
+.sort-select {
+  padding: 10px 15px;
+  border-radius: 50px;
+  border: 2px solid #e0e0e0;
+  background-color: #ffffff;
+  font-size: 14px;
+  color: #333333;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.sort-select:focus,
+.sort-select:hover {
+  border-color: #4a90e2;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+}
+
+/* Container principal da barra de busca */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px; /* Reduzi um pouco para dar espaço ao filtro */
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 50px;
+  padding: 5px 5px 5px 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Efeito de foco na barra */
+.search-container:focus-within {
+  border-color: #4a90e2;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+}
+
+/* Campo de digitação */
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #333333;
+  background: transparent;
+  padding: 10px 0;
+}
+
+.search-input::placeholder {
+  color: #999999;
+}
+
+.search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Botão de envio (lupa) */
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #357abd;
+}
+
+.search-button svg {
+  width: 18px;
+  height: 18px;
+}
