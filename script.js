@@ -32,7 +32,8 @@ function menorPreco() {
     //forEach : para cada elemento dentro do array cards faça o seguinte...
     //appendChild joga o elemento para a última parte do container
 
-    /*Abaixo a forma antiga sem forEach
+    /*
+    Abaixo a forma antiga sem forEach
     
     for (let i = 0; i < cards.length; i++) {
     let card = cards[i]; // Pegamos o elemento do array
@@ -52,7 +53,19 @@ function maiorPreco() {
     cards.forEach(card => container.appendChild(card));
 }
 function ordemAlfabetica() {
-    alert('deu certo a ordem alfabética')
+    const container = document.querySelector('.book-grid')
+    const cards = Array.from(document.querySelectorAll('.book-card'))
+
+    cards.sort((a,b) => {
+        const tituloA = a.querySelector('.book-title').textContent
+        const tituloB = b.querySelector('.book-title').textContent
+        return tituloA.localeCompare(tituloB) //Compara o titulo A com titulo B no idioma local
+        //retorna -1 se A vem antes de B no dicionário
+        //retorna 1 se A vem depois de B no dicionário
+        //retorna 0 se A e B são a mesma palavra
+        //para comparar de Z a A utilizamos tituloB.localeCompare(tituloA)
+    });
+    cards.forEach(card => container.appendChild(card)); //Para cada elemento do array cards adicione no fim do container como elemento filho
 }
 function refazer() {
     location.reload() //recarregar a página
